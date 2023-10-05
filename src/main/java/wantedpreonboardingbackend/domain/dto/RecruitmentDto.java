@@ -28,27 +28,27 @@ public class RecruitmentDto {
 
     @Getter
     @Setter
+    public static class DetailPage {
+        private Long recruitmentId;
+        private String companyName;
+        private String nation;
+        private String region;
+        private String recruitmentPosition;
+        private Long recruitmentReward;
+        private String skill;
+        private String recruitmentContent;
+        private List<Long> otherRecruitments;
+    }
+
+    @Getter
+    @Setter
     public static class Response {
         private Long recruitmentId;
         private String companyName;
         private String nation;
         private String region;
         private String recruitmentPosition;
-        private String recruitmentReward;
+        private Long recruitmentReward;
         private String skill;
-    }
-
-    @Getter
-    @Setter
-    public static class ResponseList {
-        private Long recruitmentId;
-        private String companyName;
-        private String nation;
-        private String region;
-        private String recruitmentPosition;
-        private String recruitmentReward;
-        private String skill;
-        private String recruitmentContent;
-        private List<Long> otherRecruitments;
     }
 }

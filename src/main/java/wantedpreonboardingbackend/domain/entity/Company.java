@@ -27,6 +27,6 @@ public class Company {
     @Column(length = 20, nullable = false)
     private String region;
 
-    @OneToMany(mappedBy = "companyId")
+    @OneToMany(mappedBy = "company")
     private List<Recruitment> recruitments;
 }
