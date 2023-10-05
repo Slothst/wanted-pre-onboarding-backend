@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -25,4 +26,7 @@ public class Company {
 
     @Column(length = 20, nullable = false)
     private String region;
+
+    @OneToMany(mappedBy = "companyId")
+    private List<Recruitment> recruitments;
 }

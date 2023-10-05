@@ -28,4 +28,8 @@ public class Recruitment {
 
     @Column(nullable = false)
     private String skill;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id")
+    private Company company;
 }
