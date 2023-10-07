@@ -22,6 +22,8 @@
 3. User와 Company 데이터는 MySQL Workbench를 통해 임의로 생성
 4. 채용공고 CRUD를 구현할 Recruitment Service 구현
 5. 검색 기능을 구현하기 위해 Recruitment Repository에서 Query문을 사용해 구현
-6. 이 기능들의 API를 구현하기 위해 Recruitment Controller 구현
-7. 채용 공고 지원을 위해 Apply Entity, Repository를 만듦
-8. 채용 공고 지원 기능 구현을 위해 Apply Service, Controller 구현
+6. 채용공고 상세 페이지에서 해당 회사가 올린 다른 채용공고를 보여주기 위해 
+   Recruitment Repository에서 해당 회사 아이디를 가진 채용 공고들을 찾아, 해당 채용 공고 제외하고 다른 채용공고 아이디 List로 출력
+7. 이 기능들의 API를 구현하기 위해 Recruitment Controller 구현
+8. 채용 공고 지원을 위해 Apply Entity, Repository를 만듦
+9. 채용 공고 지원 기능 구현을 위해 Apply Service, Controller 구현
