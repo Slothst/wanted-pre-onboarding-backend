@@ -27,3 +27,6 @@
 7. 이 기능들의 API를 구현하기 위해 Recruitment Controller 구현
 8. 채용 공고 지원을 위해 Apply Entity, Repository를 만듦
 9. 채용 공고 지원 기능 구현을 위해 Apply Service, Controller 구현
+10. 단위 테스트 구현
+   - Repository 테스트는 구현하였으나, Service 테스트를 구현하는 과정에서 실제 구현 코드에서 findById()로 객체를 찾는
+     과정에서 문제를 해결하지 못하여 createRecruitment 테스트밖에 구현하지 못함
