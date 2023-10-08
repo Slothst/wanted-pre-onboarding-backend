@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import wantedpreonboardingbackend.domain.dto.RecruitmentDto;
 import wantedpreonboardingbackend.domain.entity.Recruitment;
 import wantedpreonboardingbackend.domain.mapper.RecruitmentMapper;
+import wantedpreonboardingbackend.domain.mapper.RecruitmentMapperImpl;
 import wantedpreonboardingbackend.domain.repository.RecruitmentRepository;
 
 import java.util.ArrayList;
@@ -19,10 +20,10 @@ public class RecruitmentService {
     private final RecruitmentMapper recruitmentMapper;
     private final CompanyService companyService;
 
-    public void createRecruitment(RecruitmentDto.Post post) {
+    public Recruitment createRecruitment(RecruitmentDto.Post post) {
         Recruitment recruitment = recruitmentMapper.postDtoToRecruitment(post);
         recruitment.setCompany(companyService.findVerifiedCompany(post.getCompanyId()));
-        recruitmentRepository.save(recruitment);
+        return recruitmentRepository.save(recruitment);
     }
 
     @Transactional
